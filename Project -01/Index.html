@@ -1,0 +1,671 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Tail_Project01</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .montserrat {
+      font-family: "Montserrat", sans-serif;
+    }
+    .nunito {
+      font-family: "Nunito Sans", sans-serif;
+    }
+    .w87{
+      width: 87%;
+      margin: 0 auto;
+    }
+    .text_hight{
+      line-height: 48px;
+    }
+    .posi_box{
+      position: absolute;
+      right: -5px;
+      bottom: -9px;
+    }
+    .shad:hover{
+      transition: .5s ease-in-out;
+      box-shadow: 15px 15px 38px 0 rgba(0, 0, 0, .1);
+    }
+
+    .text22px{
+      font-size: 22px;
+    }
+    .ser_card ul li a:hover span{
+      display: inline;
+      transform: scaleX(1);
+    }
+    .member:hover{
+      transition: .5s ease-in-out;
+      box-shadow: -8px 9px 24px 0px rgba(0, 0, 0, .1);
+    }
+    .member2:hover{
+      transition: .5s ease-in-out;
+      box-shadow: -10px 14px 30px -1px rgba(0, 0, 0, .1);
+    }
+    .member3:hover{
+      transition: .5s ease-in-out;
+      box-shadow: 16px 14px 28px 0px rgba(0, 0, 0, .1);
+    }
+    .client_card{
+      box-shadow: 0px 1px 17px 11px rgba(0, 0, 0, .1);
+      z-index: 1;
+    }
+    .card_btm {
+      box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, .1);
+      width: 96%;
+      height: 5%;
+      bottom: -5%;
+      left: 2%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <div class="bg-white xl:bg-[#141D38] xl:text-white fixed top-0 left-0 w-full z-[9999]">
+    <div class="container w-[90%] xl:w-10/12 mx-auto">
+      <div class="grid grid-cols-2 xl:grid-cols-4 justify-center items-center gap-32">
+        <div class="logo w-32 lg:w-40 xl:w-40">
+          <a href="https://wpdemo.archiwp.com/engitech/home-3/#" target="_blank" class="hidden xl:block"><img src="img/logo-light.svg" alt=""></a>
+          <a href="https://wpdemo.archiwp.com/engitech/home-3/#" target="_blank" class="xl:hidden"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="col-span-2 hidden xl:block">
+          <ul class="nunito capitalize flex justify-start	justify-around gap-10">           
+            <li class="border-b-4 border-sky-500 lg:h-24 xl:h-24 flex items-center ">
+              <a href="#home" class="text-base font-bold tracking-wider hover:text-sky-500">home</a>
+            </li>
+            <li class="lg:h-24 xl:h-24 border-b-4 border-transparent flex items-center hover:border-b-4 hover:border-sky-500 ">
+              <a href="#company" class="text-base font-bold tracking-wider hover:text-sky-500">company</a>
+            </li>           
+            <li class="lg:h-24 xl:h-24 border-b-4 border-transparent flex items-center hover:border-b-4 hover:border-sky-500 ">
+              <a href="#services" class="text-base font-bold tracking-wider hover:text-sky-500">services</a>
+            </li>
+            <li class="lg:h-24 xl:h-24 border-b-4 border-transparent flex items-center hover:border-b-4 hover:border-sky-500 ">
+              <a href="#project" class="text-base font-bold tracking-wider hover:text-sky-500">project</a>
+            </li>
+            <li class="lg:h-24 xl:h-24 border-b-4 border-transparent flex items-center hover:border-b-4 hover:border-sky-500 ">
+              <a href="#blog" class="text-base font-bold tracking-wider hover:text-sky-500">blog</a>
+            </li>
+            <li class="lg:h-24 xl:h-24 border-b-4 border-transparent flex items-center hover:border-b-4 hover:border-sky-500 ">
+              <a href="#contacts" class="text-base font-bold tracking-wider hover:text-sky-500">contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <ul class="flex justify-end gap-6 xl:gap-10 items-center h-16 lg:h-20">
+            <li class="inline-block relative">
+              <a href="" class="text-xl "><i class="fa-solid fa-bag-shopping"></i></a>
+              <div class="absolute top-4 right-3.5 w-6 h-6 bg-sky-500 text-center rounded-full"><p>0</p></div>
+            </li>
+            <li class="inline-block"><a href="" class="text-xl lg:text-2xl"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li class="inline-block hidden xl:block"><a href="" class="text-xl lg:text-2xl"><i class="fa-solid fa-border-all"></i></a></li>
+            <li class="inline-block xl:hidden"><a href="" class="text-xl lg:text-2xl"><i class="fa-solid fa-bars"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Banner section -->
+  <div id="home" class="banner text-center bg-[url('img/banner-home3.jpg')]  bg-no-repeat bg-cover mt-5 lg:mt-20 xl:mt-24 lg:pt-44 xl:pt-48 lg:pb-32 xl:pb-32 pt-28 pb-16">
+    <div class="">
+      <h4 class="text-sm md:text-xl lg:text-2xl xl:text-2xl text-white font-medium nunito py-3">// For Over 15 Years. For Millions of Users</h4>
+      <h2 class="text-3xl md:text-5xl lg:text-7xl xl:text-7xl font-black text-white montserrat uppercase">Powerful <br> digital Solutions</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 justify-center gap-7 text-white xl:w-[87%] lg:w-[87%] w-[90%] mx-auto md:p-10 lg:p-10 xl:p-10 pt-10">
+      <div class="py-6 px-8 border border-gray-500 hover:border-sky-500 hover:bg-[#141D38] duration-1000 w-full">
+        <div class="text-3xl mb-3.5"><i class="fa-solid fa-chart-simple"></i></div>
+        <h5 class="text-base font-semibold uppercase w-4/5 text-center mx-auto">Data Analytics</h5>
+      </div>
+      <div class="py-6 px-6 border border-gray-500 hover:border-sky-500 hover:bg-[#141D38] duration-1000">
+        <div class="text-3xl mb-3.5"><i class="fa-solid fa-chart-simple"></i></div>
+        <h5 class="text-base font-semibold uppercase w-4/5 text-center mx-auto">web development</h5>
+      </div>
+      <div class="py-6 px-8 border border-gray-500 hover:border-sky-500 hover:bg-[#141D38] duration-1000">
+        <div class="text-3xl mb-3.5"><i class="fa-solid fa-chart-simple"></i></div>
+        <h5 class="text-base font-semibold uppercase w-4/5 text-center mx-auto">Data Analytics</h5>
+      </div>
+      <div class="py-6 px-8 border border-gray-500 hover:border-sky-500 hover:bg-[#141D38] duration-1000">
+        <div class="text-3xl mb-3.5"><i class="fa-solid fa-chart-simple"></i></div>
+        <h5 class="text-base font-semibold uppercase w-4/5 text-center mx-auto">Data Analytics</h5>
+      </div>
+      <div class="py-6 px-8 border border-gray-500 hover:border-sky-500 hover:bg-[#141D38] duration-1000">
+        <div class="text-3xl mb-3.5"><i class="fa-solid fa-chart-simple"></i></div>
+        <h5 class="text-base font-semibold uppercase w-4/5 text-center mx-auto">Data Analytics</h5>
+      </div>
+    </div>
+  </div>
+  <!--Tech-->
+  <div class="py-32">
+    <div class="">
+      <h6 class="text-[#7E5CB6] text-xs lg:text-sm xl:text-sm nunito font-extrabold uppercase mb-2 text-center hidden lg:block xl:block">// we are engitech</h6>
+      <div class="bg-[url('img/bg-s1-home3.png')] bg-no-repeat bg-center bg-cover pb-6 ">
+        <div class="text-center ">
+          <h6 class="text-[#7E5CB6] text-xs lg:text-sm xl:text-sm nunito font-extrabold uppercase mb-2 text-center lg:hidden xl:hidden">// we are engitech</h6>
+          <h2 class="montserrat text-2xl lg:text-4xl xl:text-4xl font-extrabold pt-2 sm:px-0 md:px-0 lg:px-0 xl:px-0 px-1">We are Trusted <br> 15+ Countries Worldwide</h2>
+        </div>
+        <div class="">
+          <div class="w87">
+            <img src="img/image1-home3.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-rows md:grid-cols-2 lg:flex lg:flex-wrap xl:grid-cols-3 justify-center gap-10 w-[90%]  mx-auto pt-10">
+        <div class=" z-0 relative overflow-hidden shad md:col-span-2">
+          <div class="flex items-center justify-center gap-7 border border-[#EEEEEE] hover:border-transparent py-8 pl-6 pr-24 ">
+            <div class="">
+              <div class="text-xl bg-[#7141B1] rounded-full w-10 h-10 flex justify-center items-center text-white"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="">
+              <h5 class="montserrat font-bold text-lg">Machine Learning</h5>
+              <p class="nunito text-base font-medium">Support and Evolution</p>
+            </div>
+          </div>
+          <div class="posi_box "><span class="text-7xl montserrat font-bold text-[#F2F2F2]">01</span></div>
+        </div>
+
+        <div class="z-0 relative overflow-hidden shad md:col-span-2">
+          <div class="flex items-center justify-center gap-7 border border-[#EEEEEE] hover:border-transparent py-8 pl-6 pr-24 ">
+            <div class="">
+              <div class="text-xl bg-[#43BAFF] rounded-full w-10 h-10 flex justify-center items-center text-white"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="">
+              <h5 class="montserrat font-bold text-lg">Artificial Intelligence</h5>
+              <p class="nunito text-base font-medium">Support and Evolution</p>
+            </div>
+          </div>
+          <div class="posi_box "><span class="text-7xl montserrat font-bold text-[#F2F2F2]">02</span></div>
+        </div>
+
+        <div class="z-0 relative overflow-hidden shad md:col-span-2">
+          <div class="flex items-center justify-center gap-7 border border-[#EEEEEE] hover:border-transparent   py-8 pl-6 pr-24 ">
+            <div class="">
+              <div class="text-xl bg-[#221D48] rounded-full w-10 h-10 flex justify-center items-center text-white"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <div class="">
+              <h5 class="montserrat font-bold text-lg">Augmented Reality</h5>
+              <p class="nunito text-base font-medium">Support and Evolution</p>
+            </div>
+          </div>
+          <div class="posi_box "><span class="text-7xl montserrat font-bold text-[#F2F2F2]">03</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trend -->
+  <div class="bg-[url(img/bg-s2-home3.jpg)] bg-center bg-cover bg-no-repeat">
+    <div class="w87 grid grid-rows md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 md:gap-20 lg:gap-20 xl:gap-10 gap-16 lg:py-32 xl:32 py-20 items-center">
+      <div class="">
+        <div class="lg:pr-16 xl:pr-16 ">
+          <h6 class="text-[#7E5CB6] text-xs lg:text-sm xl:text-sm nunito font-extrabold uppercase">// technology index</h6>
+          <h2 class="montserrat text-[28px] lg:text-4xl xl:text-4xl font-extrabold pt-2 lg:leading-snug text-white md:pr-16 lg:pr-16 xl:pr-16 lg:pr-0">Improve and Innovate with the Tech Trends</h2>
+          <p class="text-base nunito font-normal text-white leading-8 pt-6 ">We hire and build your own remote dedicated development teams tailored to your specific needs. Get professional fulltime developers who work exclusively for you as a part of your company. We handle all the practical aspects related to hiring and hosting your team at our premises, thus saving you half a cost and a lot of efforts.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 grid-cols-2 gap-10 pt-16">
+          <div class="">
+            <h1 class="montserrat text-4xl font-extrabold text-[#43BAFF]">330<span class="pl-1.5">+</span></h1>
+            <h6 class="nunito text-base font-bold text-white capitalize tracking-wider">active Clients</h6>
+          </div>
+          <div class="">
+            <h1 class="montserrat text-4xl font-extrabold text-[#43BAFF]">850<span class="pl-1.5">+</span></h1>
+            <h6 class="nunito text-base font-bold text-white capitalize tracking-wider">Projects Done</h6>
+          </div>
+          <div class="">
+            <h1 class="montserrat text-4xl font-extrabold text-[#43BAFF]">25<span class="pl-1.5">+</span></h1>
+            <h6 class="nunito text-base font-bold text-white capitalize tracking-wider">Team Advisors</h6>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex lg:flex xl:flex gap-8 ">
+        <div class="flex flex-col gap-8">
+          <div class="">
+            <a href="" class="relative"><img src="img/image-box1.jpg" alt="" class="filter grayscale hover:grayscale-0 transition duration-300">
+              <div class="bg-[#10444cb3] absolute top-0 left-0 w-full h-full flex justify-center items-center  hover:bg-transparent  duration-1000">
+                <h4 class="montserrat font-bold text-2xl capitalize text-white ">our misssion</h4>
+              </div>
+            </a>
+          </div>
+          <div class="">
+            <a href="" class="relative filter grayscale hover:grayscale-0 transition duration-300"><img src="img/image-box3.jpg" alt="">
+              <div class="bg-[#10444cb3] absolute top-0 left-0 w-full h-full flex justify-center items-center  hover:bg-transparent  duration-1000">
+                <h4 class="montserrat font-bold text-2xl capitalize text-white ">our vision</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 xl:pt-8 md:pt-0 lg:pt-0 pt-8">
+          <div class="">
+            <a href="" class="relative filter grayscale hover:grayscale-0 transition duration-300"><img src="img/image-box2.jpg" alt="">
+              <div class="bg-[#10444cb3] absolute top-0 left-0 w-full h-full flex justify-center items-center  hover:bg-transparent  duration-1000">
+                <h4 class="montserrat font-bold text-2xl capitalize text-white ">our philosophy</h4>
+              </div>
+            </a>
+          </div>
+          <div class="">
+            <a href="" class="relative"><img src="img/image-box4.jpg" alt="" class="filter grayscale hover:grayscale-0 transition duration-300">
+              <div class="bg-[#10444cb3] absolute top-0 left-0 w-full h-full flex justify-center items-center  hover:bg-transparent  duration-1000">
+                <h4 class="montserrat font-bold text-2xl capitalize text-white ">our strategy</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- client -->
+  <div class="w87 py-12">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href=""><img src="img/client/client1.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client2.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client3.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client4.png" class="w-24 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client5.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client6.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client1.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client2.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client3.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client4.png" class="w-24 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client5.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+        <div class="swiper-slide"><a href=""><img src="img/client/client6.svg" class="w-36 mx-auto opacity-55 filter grayscale hover:grayscale-0 transition duration-300" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- service -->
+  <div class="service bg-[#F8F8F8]">
+    <div class="lg:pt-32 lg:pb-72 xl:pt-32 xl:pb-72 pt-14 pb-36">
+      <div class="">
+        <h6 class="text-[#7E5CB6] text-xs lg:text-sm xl:text-sm nunito font-extrabold uppercase mb-2 text-center">// our service</h6>
+        <h2 class="text-center montserrat text-2xl lg:text-4xl xl:text-4xl font-extrabold leading-10 pt-2">We Offer a Wide <br> Variety of IT Services</h2>
+      </div>
+      <div class="grid place-content-center md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7 pt-10 w87">
+        <div class="border border-[#EEEEEE] hover:border-transparent transition duration-300 shad bg-white p-10 relative overflow-hidden">
+          <h5 class="montserrat text22px font-extrabold capitalize text-[#1B1D21]">Custom Software Development</h5>
+          <p class="text-[#6D6D6D] text-base nunito leading-7 pt-4">We help businesses elevate their value through custom software development, product design, QA and consultancy.</p>
+          <div class="ser_card pt-4 leading-10">
+            <ul>
+              <li class="bg-[#F8F8F8]"><a href="" class="ml-6 nunito text-sm font-extrabold uppercase tracking-wide text-[#7E4FB1]"><span class="text-[#7141B1]">//</span> eCommerce solutions</a></li>
+              <li class="hover:bg-[#F8F8F8] transition duration-300"><a href="" class="ml-6 nunito text-sm font-extrabold uppercase tracking-wide hover:text-[#7E4FB1]"><span class="hidden transition duration-300">//</span> Gamification software</a></li> 
+              <li class="hover:bg-[#F8F8F8] transition duration-300"><a href="" class="ml-6 nunito text-sm font-extrabold uppercase tracking-wide hover:text-[#7E4FB1]"><span class="hidden transition duration-300">//</span> Client mobile apps</a></li>
+            </ul>
+          </div>
+          <div class="absolute -top-16 -right-16 bg-gradient-to-b from-[#336BA4] to-[#17A9D5] w-40 h-40 rounded-full flex items-center">
+            <div class="relative"><span class="text-5xl text-white absolute top-0 left-9"><i class="fa-brands fa-critical-role"></i></span></div>
+          </div>
+        </div>
+        <div class="border border-[#EEEEEE] hover:border-transparent transition duration-300 shad bg-white p-10 relative overflow-hidden">
+          <h5 class="montserrat text22px font-extrabold capitalize text-[#1B1D21]">Outsoursing Development</h5>
+          <p class="text-[#6D6D6D] text-base nunito leading-7 pt-4">We help businesses elevate their value through custom software development, product design, QA and consultancy.</p>
+          <div class="ser_card pt-4 leading-10">
+            <ul>
+              <li class="hover:bg-[#F8F8F8] transition duration-300"><a href="" class="pl-6 nunito text-sm font-extrabold uppercase tracking-wide hover:text-[#7E4FB1]"><span class="hidden transition duration-300">//</span> Development process</a></li> 
+
+              <li class="bg-[#F8F8F8]"><a href="" class="pl-6 nunito text-sm font-extrabold uppercase tracking-wide text-[#7E4FB1]"><span class="text-[#7141B1]">//</span> Change management</a></li>
+
+              <li class="hover:bg-[#F8F8F8] transition duration-300"><a href="" class="pl-6 nunito text-sm font-extrabold uppercase tracking-wide hover:text-[#7E4FB1]"><span class="hidden transition duration-300">//</span> Application support</a></li>
+            </ul>
+          </div>
+          <div class="absolute -top-16 -right-16 bg-gradient-to-b from-[#336BA4] to-[#17A9D5] w-40 h-40 rounded-full flex items-center">
+            <div class="relative"><span class="text-5xl text-white absolute top-0 left-9"><i class="fa-brands fa-fantasy-flight-games"></i></span></div>
+          </div>
+        </div>
+        <div class="border border-[#EEEEEE] hover:border-transparent transition duration-300 shad bg-white p-10 relative overflow-hidden">
+          <h5 class="montserrat text22px font-extrabold capitalize text-[#1B1D21]">Software Product Development</h5>
+          <p class="text-[#6D6D6D] text-base nunito leading-7 pt-4">We help businesses elevate their value through custom software development, product design, QA and consultancy.</p>
+          <div class="ser_card pt-4 leading-10">
+            <ul>
+              <li class="hover:bg-[#F8F8F8] transition duration-300">
+                <a href="" class="pl-6 nunito text-sm font-extrabold uppercase tracking-wide hover:text-[#7E4FB1]"><span class="hidden transition duration-300">//</span> Desktop applications</a>
+              </li>               
+              <li class="hover:bg-[#F8F8F8] transition duration-300">
+                <a href="" class="pl-6 nunito text-sm font-extrabold uppercase tracking-wide hover:text-[#7E4FB1]"><span class="hidden transition duration-300">//</span> Software-as-a-Service</a>
+              </li>
+              <li class="bg-[#F8F8F8]">
+                <a href="" class="pl-6 nunito text-sm font-extrabold uppercase tracking-wide text-[#7E4FB1]"><span class="text-[#7141B1]">//</span> Mobile apps</a>
+              </li>
+            </ul>
+          </div>
+          <div class="absolute -top-16 -right-16 bg-gradient-to-b from-[#336BA4] to-[#17A9D5] w-40 h-40 rounded-full flex items-center">
+            <div class="relative"><span class="text-5xl text-white absolute top-0 left-9"><i class="fa-brands fa-critical-role"></i></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--services  -->
+  <div class=" relative">
+    <!-- Website -->
+    <div class="bg-[url(img/bg-cta1-home1.jpg)] lg:bg-center xl:bg-center bg-cover bg-no-repeat absolute w-[90%] top-[-4%] left-[5%] md:w-[90%] md:top-[-2%] md:left-[5%] lg:w-[87%] xl:w-[87%] lg:left-[6.5%] xl:left-[6.5%] lg:top-[-15%] xl:top-[-15%] w-[90%] left-[5%] top-[-10%]">
+      <div class="lg:w-[87%] xl:w-[87%] w-[95%] mx-auto lg:flex xl:flex place-content-between lg:pt-16 xl:pt-16 lg:pb-52 xl:pb-52 py-7">
+        <div class="text-white">
+          <h6 class="nunito text-xs lg:text-xl xl:text-xl font-medium">// We Carry more Than Just Good Coding Skills</h6>
+          <h2 class="montserrat text-3xl lg:text-5xl xl:text-5xl font-extrabold pt-2">Let's Build Your Website!</h2>
+        </div>
+        <div class="lg:flex xl:flex justify-end items-end text-white pt-10 lg:pt-0 xl:pt-0">
+          <a href="" class="uppercase font-extrabold text-sm border border-white overflow-hidden py-4 px-9 bg-transparent hover:bg-sky-500 hover:border-transparent transition duration-300">contact us</a>
+        </div>
+      </div>
+    </div>
+    <div class="lg:pt-80 lg:pb-20 xl:pt-80 xl:pb-20 pt-48 pb-10">
+      <div class="text-center">
+        <h6 class="text-[#7E5CB6] text-xs lg:text-sm xl:text-sm nunito font-extrabold uppercase ">// our services</h6>
+        <h2 class="montserrat text-2xl lg:text-4xl xl:text-4xl font-extrabold leading-10 pt-2 ">Our Leadership Team</h2>
+        <p class="nunito text-base text-[#6D6D6D] lg:pt-4 xl:pt-4 px-10">We help businesses elevate their value through custom software development, <br>
+          product design, QA and consultancy services.</p>
+      </div>
+      <div class="lg:w-[87%] xl:w-[87%] mx-auto w-[96%] p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+        <div class="relative group">
+          <img src="img/member1.jpg" alt="">
+          <div class="absolute top-24 right-0 hidden group-hover:block transition duration-300">
+            <ul class="bg-[#262051] text-[#6D6D6D] text-center flex flex-col gap-4 py-3 w-10">
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-twitter"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-pinterest-p"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-center py-4 member">
+            <h4 class="montserrat text22px font-bold">David Ferry</h4>
+            <h6 class="nunito text-sm font-bold uppercase text-[#797986]">Co-Founder of company</h6>
+          </div>
+        </div>
+        <div class="relative group">
+          <img src="img/member2.jpg" alt="">
+          <div class="absolute top-24 right-0 hidden group-hover:block transition duration-300">
+            <ul class="bg-[#262051] text-[#6D6D6D] text-center flex flex-col gap-4 py-3 w-10">
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-twitter"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-pinterest-p"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-center py-4 member2">
+            <h4 class="montserrat text22px font-bold">Christina Torres</h4>
+            <h6 class="nunito text-sm font-bold uppercase text-[#797986]">Co-Founder of company</h6>
+          </div>
+        </div>
+        <div class="relative group">
+          <img src="img/member3.jpg" alt="">
+          <div class="absolute top-24 right-0 hidden group-hover:block transition duration-300">
+            <ul class="bg-[#262051] text-[#6D6D6D] text-center flex flex-col gap-4 py-3 w-10">
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-twitter"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-pinterest-p"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-center py-4 member2">
+            <h4 class="montserrat text22px font-bold">Amalia Bruno</h4>
+            <h6 class="nunito text-sm font-bold uppercase text-[#797986]">CTO of company</h6>
+          </div>
+        </div>
+        <div class="relative group">
+          <img src="img/member4.jpg" alt="">
+          <div class="absolute top-24 right-0 hidden group-hover:block transition duration-300">
+            <ul class="bg-[#262051] text-[#6D6D6D] text-center flex flex-col gap-4 py-3 w-10">
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-twitter"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-pinterest-p"></i></a></li>
+              <li class=""><a href="#" class="text-base"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-center py-4 member3">
+            <h4 class="montserrat text22px font-bold">Robert Cooper</h4>
+            <h6 class="nunito text-sm font-bold uppercase text-[#797986]">CEO of company</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CONSULTATION -->
+  <div class="bg-[url(img/bg-cta-home2.jpg)] bg-center bg-cover bg-no-repeat">
+    <div class="text-white text-center py-36">
+      <h6 class="nunito text-lg lg:text-2xl xl:text-2xl font-medium">// Drop us a line! We are here to answer your questions 24/7</h6>
+      <h2 class="montserrat text-3xl lg:text-7xl xl:text-7xl font-extrabold pt-4 uppercase px-8 lg:px-0 xl:px-0">NEED A CONSULTATION?</h2>
+      <div class="text-center text-white pt-12">
+        <a href="" class="uppercase font-extrabold text-sm overflow-hidden py-4 px-9 bg-sky-500 hover:border-transparent transition duration-300">contact us</a>
+      </div>
+    </div>
+  </div>
+  <!-- client -->
+  <div class="bg-[#F8F8F8] pt-12">
+    <div class="bg-[url(img/bg-maps-dots.jpg)] bg-no-repeat bg-center bg-cover">
+      <div class="text-center pt-14">
+        <h6 class="text-[#7E5CB6] text-sm lg:text-sm xl:text-sm nunito font-extrabold uppercase ">// our services</h6>
+        <h2 class="montserrat text-2xl lg:text-4xl xl:text-4xl font-extrabold leading-10 pt-2">We are Trusted <br> 15+ Countries Worldwide</h2>
+      </div>
+      <!-- 
+      <div class="w87 py-28">        
+        <div class="grid grid-cols-2 gap-10">
+
+          <div class="client_card bg-white p-10 relative">
+            <div class="card_btm bg-[#F5F5F5] absolute"></div>
+            <div class="flex items-center gap-10">
+              <div class=""><img src="img/testi1.png" alt=""></div>
+              <div class="">
+                <h4 class="montserrat text-xl font-bold">Moonkle LTD,</h4>
+                <h6 class="nunito text-base font-normal text-[#6D6D6D]">Client of Company</h6>
+              </div>
+            </div>
+            <p class="nunito text-base font-normal text-[#221D48] pt-10">"Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Patience. Infinite patience. No shortcuts. Even if the client is being careless. The best part...always solving problems with great original ideas!."</p>
+          </div>
+
+          <div class="client_card bg-white p-10 relative">
+            <div class="card_btm bg-[#F5F5F5] absolute"></div>
+            <div class="flex items-center gap-10">
+              <div class=""><img src="img/testi2.png" alt=""></div>
+              <div class="">
+                <h4 class="montserrat text-xl font-bold">SoftTech,</h4>
+                <h6 class="nunito text-base font-normal text-[#6D6D6D]">Manager of Company</h6>
+              </div>
+            </div>
+            <p class="nunito text-base font-normal text-[#221D48] pt-10">"Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas!."</p>
+          </div>
+        </div>
+      </div>
+       -->
+      <div class="">
+        <div class="swiper clientSwiper lg:py-28 xl:py-28 py-16 px-8">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide ">
+              <div class="client_card bg-white lg:p-10 p-5 relative">
+                <div class="card_btm bg-[#F5F5F5] absolute"></div>
+                <div class="flex items-center gap-10">
+                  <div class=""><img src="img/testi1.png" alt=""></div>
+                  <div class="">
+                    <h4 class="montserrat text-xl font-bold">Moonkle LTD,</h4>
+                    <h6 class="nunito text-base font-normal text-[#6D6D6D]">Client of Company</h6>
+                  </div>
+                </div>
+                <p class="nunito text-base font-normal text-[#221D48] pt-10 text-justify lg:text-left xl:text-left">"Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Patience. Infinite patience. No shortcuts. Even if the client is being careless. The best part...always solving problems with great original ideas!."</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client_card bg-white lg:p-10 p-5 relative">
+                <div class="card_btm bg-[#F5F5F5] absolute"></div>
+                <div class="flex items-center gap-10">
+                  <div class=""><img src="img/testi2.png" alt=""></div>
+                  <div class="">
+                    <h4 class="montserrat text-xl font-bold">SoftTech,</h4>
+                    <h6 class="nunito text-base font-normal text-[#6D6D6D]">Manager of Company</h6>
+                  </div>
+                </div>
+                <p class="nunito text-base font-normal text-[#221D48] pt-10 text-justify lg:text-left xl:text-left">"Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas!."</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client_card bg-white lg:p-10 p-5 relative">
+                <div class="card_btm bg-[#F5F5F5] absolute"></div>
+                <div class="flex items-center gap-10">
+                  <div class=""><img src="img/testi1.png" alt=""></div>
+                  <div class="">
+                    <h4 class="montserrat text-xl font-bold">Moonkle LTD,</h4>
+                    <h6 class="nunito text-base font-normal text-[#6D6D6D]">Client of Company</h6>
+                  </div>
+                </div>
+                <p class="nunito text-base font-normal text-[#221D48] pt-10 text-justify lg:text-left xl:text-left">"Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Patience. Infinite patience. No shortcuts. Even if the client is being careless. The best part...always solving problems with great original ideas!."</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client_card bg-white lg:p-10 p-5 relative">
+                <div class="card_btm bg-[#F5F5F5] absolute"></div>
+                <div class="flex items-center gap-10">
+                  <div class=""><img src="img/testi2.png" alt=""></div>
+                  <div class="">
+                    <h4 class="montserrat text-xl font-bold">SoftTech,</h4>
+                    <h6 class="nunito text-base font-normal text-[#6D6D6D]">Manager of Company</h6>
+                  </div>
+                </div>
+                <p class="nunito text-base font-normal text-[#221D48] pt-10 text-justify lg:text-left xl:text-left">"Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas!."</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer bg-[#211E3B]">
+    <div class="pt-32 pb-20">
+      <div class="logo w-40 mx-auto">
+        <img src="img/logo-light.svg" alt="">
+      </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 py-14 w-[78%] mx-auto">
+        <div class="text-center text-white">
+          <span class="text-3xl md:text-2xl nunito text-[#43BAFF]"><i class="fa-solid fa-globe"></i></span>
+          <p class="text-lg md:text-base nunito pt-4">411 University St, Seattle, USA</p>
+          <h6 class="text-base md:text-xs nunito capitalize text-[#AEAACB] pt-3">Our Address</h6>
+        </div>
+        <div class="text-center text-white">
+          <span class="text-3xl md:text-2xl nunito text-[#43BAFF]"><i class="fa-solid fa-envelope"></i></span>
+          <p class="text-lg md:text-base nunito pt-4">contact@oceanthemes.net</p>
+          <h6 class="text-base md:text-xs nunito capitalize text-[#AEAACB] pt-3">Our Mailbox</h6>
+        </div>
+        <div class="text-center text-white">
+          <span class="text-3xl md:text-2xl nunito text-[#43BAFF]"><i class="fa-solid fa-phone-volume"></i></span>
+          <p class="text-lg md:text-base nunito pt-4">+1 -800-456-478-23</p>
+          <h6 class="text-base md:text-xs nunito capitalize text-[#AEAACB] pt-3">Our Phone</h6>
+        </div>
+      </div>
+      <div class="pt-12 text-center ">
+        <ul class="justify-center gap-16 montserrat text-base text-white font-medium hidden md:flex lg:flex xl:flex">
+          <li class="hover:text-[#43BAFF] transition duration-300"><a href="">Home</a></li>
+          <li class="hover:text-[#43BAFF] transition duration-300"><a href="">Services</a></li>
+          <li class="hover:text-[#43BAFF] transition duration-300"><a href="">Portfolio</a></li>
+          <li class="hover:text-[#43BAFF] transition duration-300"><a href="">Blog</a></li>
+          <li class="hover:text-[#43BAFF] transition duration-300"><a href="">Contacts</a></li>
+        </ul>
+        <p class="text-base nunito capitalize text-[#AEAACB] md:pt-7 lg:pt-7 xl:pt-7 pt-0 px-6">Copyright © 2024 Engitech by OceanThemes. All Rights Reserved.</p>
+      </div>
+      <div class="py-8">
+        <ul class="flex justify-center gap-3">
+          <li class="bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center"><a href="#" class="text-sm text-blue-600"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li class="bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center"><a href="#" class="text-sm text-blue-500"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li class="bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center"><a href="#" class="text-sm text-red-500"><i class="fa-brands fa-pinterest-p"></i></a></li>
+          <li class="bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center"><a href="#" class="text-sm text-red-300""><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+        1340: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".clientSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1340: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
+</body>
+</html>
+
+
+
