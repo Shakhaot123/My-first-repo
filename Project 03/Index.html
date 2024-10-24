@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Tail_Project_03</title>
@@ -26,13 +28,16 @@
     <!-- nav bar -->
   <div class="">
     <div class="bg-white">
-        <div class="w-[96%] mx-auto">
+        <div class="w-[86%] xl:w-[96%] mx-auto">
             <div class="flex justify-between items-center">
-                <div class="flex gap-10">
-                    <div class="w-32">
+                <div class="flex gap-4 xl:gap-10">
+                    <div class="xl:hidden flex items-center justify-center">
+                        <a href="" class="text-3xl"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="w-20 lg:w-32">
                         <a href="https://cliniq.bold-themes.com/classic/" target="_blank"><img src="img/logo_black.png" alt=""></a>
                     </div>
-                    <div class="">
+                    <div class="hidden xl:block">
                         <ul class="flex">
                             <li class="border-b-[3px] border-[#02C9B8] mx-2.5"><a href="#" class="source-code text-sm font-bold capitalize leading-[5rem]">home</a></li>
                             <li class="border-b-[3px] border-transparent hover:border-[#02C9B8] transition duration-300 mx-2.5"><a href="#" class="source-code text-sm font-bold capitalize leading-[5rem]">about</a></li>
@@ -43,27 +48,29 @@
                     </div>
                 </div>
             
-                <div class="flex gap-8 items-center">
-                    <div class="flex gap-2">
-                        <a href="" class="text-3xl text-[#02C9B8]"><i class="fa-solid fa-phone"></i></a>
-                        <a href="">
-                            <div class="hover:text-[#02C9B8] transition duration-300">
-                                <p class="text-sm source-code">Emergency Line</p>
-                                <p class="text-sm source-code">1-800-100-900</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w-[1px] h-9 bg-gray-400"></div>
-                    <div class="">
-                        <a href="" class="text-2xl text-[#C0C0C0] hover:text-[#02C9B8] transition duration-300 pr-2 source-code"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="" class="text-2xl text-[#C0C0C0] hover:text-[#02C9B8] transition duration-300 px-2 source-code"><i class="fa-solid fa-location-dot"></i></a>
-                        <a href="" class="text-2xl text-[#C0C0C0] hover:text-[#02C9B8] transition duration-300 pl-2 source-code relative"><i class="fa-solid fa-bag-shopping"></i>
-                            <p class="w-[16px] h-[16px] bg-[#002C5D] text-xs text-center source-code text-white absolute top-[-5px] right-[-14px] rounded-[2px]">0</p>
-                        </a>
-                    </div>
-                    <div class="text-white hover:text-black bg-[#002C5D] hover:bg-white py-2.5 px-6 cursor-pointer  hover:border hover:border-[#002C5D] ml-2 transition duration-300 block">
-                        <span class="text-[#02C9B8] pr-2"><i class="fa-brands fa-nfc-directional"></i></span>
-                        <a href="" >Online Consultation</a>
+                <div class="hidden xl:block">
+                    <div class="flex gap-8 items-center">
+                        <div class="flex gap-2">
+                            <a href="" class="text-3xl text-[#02C9B8]"><i class="fa-solid fa-phone"></i></a>
+                            <a href="">
+                                <div class="hover:text-[#02C9B8] transition duration-300">
+                                    <p class="text-sm source-code">Emergency Line</p>
+                                    <p class="text-sm source-code">1-800-100-900</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="w-[1px] h-9 bg-gray-400"></div>
+                        <div class="">
+                            <a href="" class="text-2xl text-[#C0C0C0] hover:text-[#02C9B8] transition duration-300 pr-2 source-code"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="" class="text-2xl text-[#C0C0C0] hover:text-[#02C9B8] transition duration-300 px-2 source-code"><i class="fa-solid fa-location-dot"></i></a>
+                            <a href="" class="text-2xl text-[#C0C0C0] hover:text-[#02C9B8] transition duration-300 pl-2 source-code relative"><i class="fa-solid fa-bag-shopping"></i>
+                                <p class="w-[16px] h-[16px] bg-[#002C5D] text-xs text-center source-code text-white absolute top-[-5px] right-[-14px] rounded-[2px]">0</p>
+                            </a>
+                        </div>
+                        <div class="text-white hover:text-black bg-[#002C5D] hover:bg-white py-2.5 px-6 cursor-pointer  hover:border hover:border-[#002C5D] ml-2 transition duration-300 block">
+                            <span class="text-[#02C9B8] pr-2"><i class="fa-brands fa-nfc-directional"></i></span>
+                            <a href="" >Online Consultation</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,10 +81,10 @@
   <div class="">
     <div class="bg-[url(img/hero_home_01.jpg)] bg-cover bg-no-repeat bg-center bg-local">
         <div class="w-[90%] mx-auto">
-            <div class="grid grid-cols-2">
+            <div class="grid xl:grid-cols-2">
                 <div class="">
-                    <h2 class="text-white text-[84px] font-extrabold leading-none source-code pt-32">Right there with you</h2>
-                    <p class="noto-serif italic text-white text-2xl pt-8">Center for Cardiovascular Care</p>
+                    <h2 class="text-white text-4xl md:text-6xl xl:text-[84px] font-extrabold leading-none source-code pt-20 xl:pt-32">Right there with you</h2>
+                    <p class="noto-serif italic text-white text-xl xl:text-2xl pt-8">Center for Cardiovascular Care</p>
                     <div class="pt-20">
                         <div class="text-white flex items-center gap-1 ">
                             <div class="flex items-center justify-center text-[9px] bg-[#02C9B8] w-[17px] h-[17px] rounded-full"><i class="fa-solid fa-check"></i></div>
@@ -95,16 +102,16 @@
                 </div>
             </div>
             <div class="py-16">
-                <div class="w-[75%] grid grid-cols-9 bg-white px-5 py-6 rounded-md items-center">
+                <div class="xl:w-[75%] w-[90%] mx-auto xl:m-0 lg:mx-auto grid lg:grid-cols-9 bg-white px-5 py-6 rounded-md items-center">
                     <div class=""><img src="img/doctor_01.jpg" alt="" class="rounded-full"></div>
-                    <div class="col-span-5">
+                    <div class="lg:col-span-5 pt-2">
                         <p class="text-sm">MAKE AN APPOINTMENT FOR:</p>
                         <div class="flex justify-between items-center border-b-2 border-[#02C9B8] pt-2">
-                            <h3 class="text-2xl pb-2">Cardiovascular Examination</h3>
-                            <h5 class="text-xl pb-2"><i class="fa-solid fa-angle-down"></i></h5>
+                            <h3 class="xl:text-2xl text-base pb-2">Cardiovascular Examination</h3>
+                            <h5 class="xl:text-xl text-base pb-2"><i class="fa-solid fa-angle-down"></i></h5>
                         </div>
                     </div>
-                    <div class="col-span-3 bg-[#02C9B8] hover:bg-white hover:border hover:border-[#02C9B8] text-center ml-6 mr-2 py-4 text-white hover:text-[#02C9B8] transition duration-300 cursor-pointer">
+                    <div class="lg:col-span-3 bg-[#02C9B8] hover:bg-white hover:border hover:border-[#02C9B8] text-center lg:ml-6 lg:mr-2 mt-4 py-4 text-white hover:text-[#02C9B8] transition duration-300 cursor-pointer md:w-56 md:mx-auto">
                         <a href="" class="text-xl"><i class="fa-regular fa-calendar-check"></i></a>
                         <a href="" class="text-sm font-bold pl-2">Make An Appointment</a>
                     </div>
@@ -116,7 +123,7 @@
   <!-- service -->
   <div class="mt-8">
     <div class="bg-gray-100 py-16">
-        <div class="w-[90%] mx-auto grid grid-cols-3 gap-8">
+        <div class="w-[90%] mx-auto grid lg:grid-cols-3 gap-8">
             <a href="" class="bg-white p-5 group">
                 <div class="overflow-hidden">
                     <img src="img/card_image_01.jpg" alt="" class="rounded-sm group-hover:scale-110 transform transition duration-300 ease-in-out">
@@ -158,16 +165,16 @@
   </div>
   <!-- Cardiac -->
   <div class="w-[90%] mx-auto py-16">
-    <div class="title w-[70%] pb-16">
-        <h4 class="text-xl font-bold text-[#02C9B8] pb-4">Cardiac Imaging and Testing</h4>
-        <h2 class="text-4xl font-extrabold text-[#002C5D]">In our stress laboratory, we provide exercise stress testing and all forms of nuclear stress testing in a nationally accredited facility</h2>
+    <div class="title xl:w-[70%] pb-16 ">
+        <h4 class="text-base md:text-xl xl:text-xl font-bold text-[#02C9B8] pb-4">Cardiac Imaging and Testing</h4>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#002C5D]">In our stress laboratory, we provide exercise stress testing and all forms of nuclear stress testing in a nationally accredited facility</h2>
     </div>
-    <div class="grid grid-cols-2">
+    <div class="lg:grid grid-cols-2">
         <div class="">
-            <img src="img/hero_image_01.jpg" alt="">
+            <img src="img/hero_image_01.jpg" alt="" class="mx-auto lg:pr-8 xl:p-0 xl:m-0">
         </div>
-        <div class="my-auto">
-            <div class="grid grid-cols-3 border-b border-gray-300">
+        <div class="my-auto p-8 lg:p-0">
+            <div class="lg:grid grid-cols-3 border-b border-gray-300">
                <div class="">
                     <p class="text-3xl text-[#002C5D]"><i class="fa-solid fa-heart-pulse"></i></p>
                     <p class="text-base font-bold capitalize text-[#002C5D]">Approach</p>
@@ -176,7 +183,7 @@
                     <p class="text-base text-[#002C5D]">We offer efficient access to cardiometabolic testing you services. We are leaders in the rapid assessment of and cardiovascular risk factors and identifying efficient access to cardiometabolic atherosclerosis.</p>
                </div>
             </div>
-            <div class="grid grid-cols-3 border-b border-gray-300 pt-8">
+            <div class="lg:grid grid-cols-3 border-b border-gray-300 pt-8">
                 <div class="">
                     <p class="text-3xl text-[#002C5D]"><i class="fa-solid fa-stethoscope"></i></p>
                     <p class="text-base font-bold capitalize text-[#002C5D]">Experts</p>
@@ -185,7 +192,7 @@
                     <p class="text-base text-[#002C5D]">Our cardiovascular experts — cardiologists, vascular surgeons, radiologists, you nurse practitioners — work cardiovascular risk factors and identifying efficient together to provide you expert, compassionate care.</p>
                 </div>
             </div>
-            <div class="grid grid-cols-3 pt-8">
+            <div class="lg:grid grid-cols-3 pt-8">
                 <div class="">
                     <p class="text-3xl text-[#002C5D]"><i class="fa-solid fa-microchip"></i></p>
                     <p class="text-base font-bold capitalize text-[#002C5D]">Technology</p>
@@ -198,12 +205,12 @@
     </div>
   </div>
   <!-- Our Doctors -->
-  <div class="bg-[url(img/background_01.jpg)] bg-cover bg-no-repeat bg-center bg-local">
+  <div class="bg-[url(img/background_01.jpg)] bg-cover bg-no-repeat bg-center bg-fixed">
     <div class="w-[85%] mx-auto py-32">
-        <div class="w-[60%] ">
-            <h4 class="text-xl font-bold text-[#02C9B8] pb-4">Our Doctors</h4>
-            <h2 class="text-7xl font-extrabold text-white">Meet Our Heart Specialists</h2>
-            <p class="noto-serif italic text-white text-2xl py-8">Your heart is in outstanding hands with the physicians at the Heart Clinic and over the course of many years.</p>
+        <div class="xl:w-[60%] ">
+            <h4 class="text-base lg:text-xl font-bold text-[#02C9B8] pb-4">Our Doctors</h4>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white">Meet Our Heart Specialists</h2>
+            <p class="noto-serif italic text-white text-xl lg:text-2xl py-8">Your heart is in outstanding hands with the physicians at the Heart Clinic and over the course of many years.</p>
             <div class="border border-[#02C9B8] inline-block cursor-pointer py-5 px-8 hover:bg-[#02C9B8] transition duration-300 mt-4">
                 <a href="" class="uppercase text-white font-bold text-sm">meet our team</a>
             </div>
@@ -214,35 +221,35 @@
   <div class="bg-gray-100 mt-8">
     <div class="w-[90%] mx-auto">
         <div class="title text-center py-16">
-            <h2 class="text-6xl font-extrabold text-[#002C5D]">Common Heart Conditions</h2>
-            <p class="noto-serif italic text-[#002C5D] text-2xl pt-4">Delivering world class cardiology care</p>
+            <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#002C5D]">Common Heart Conditions</h2>
+            <p class="noto-serif italic text-[#002C5D] text-center text-xl xl:text-2xl pt-4">Delivering world class cardiology care</p>
         </div>
         <div class="pt-4 pb-16">
             <div class="">
-                <ul class="grid grid-cols-5 ">
-                    <li class="bg-white text-center py-8 group">
-                        <p class="text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-stethoscope"></i></p>
-                        <p class="text-base font-bold text-[#002C5D] pt-8">Arrhythmia</p>
+                <ul class="md:grid grid-cols-5 ">
+                    <li class="bg-white text-center py-3 md:py-8 group flex items-center gap-6 md:block">
+                        <p class="text-4xl md:text-5xl xl:text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-stethoscope"></i></p>
+                        <p class="text-base font-bold text-[#002C5D] md:pt-8">Arrhythmia</p>
                     </li>
-                    <li class="hover:bg-white transition duration-300 text-center py-8 group">
-                        <p class="text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-lungs-virus"></i></p>
-                        <p class="text-base font-bold text-[#002C5D] pt-8">Atherosclerosis</p>
+                    <li class="hover:bg-white transition duration-300 text-center py-3 md:py-8 group  flex items-center gap-6 md:block">
+                        <p class="text-4xl md:text-5xl xl:text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-lungs-virus"></i></p>
+                        <p class="text-base font-bold text-[#002C5D] md:pt-8">Atherosclerosis</p>
                     </li>
-                    <li class="hover:bg-white transition duration-300 text-center py-8 group">
-                        <p class="text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-heart-crack"></i></p>
-                        <p class="text-base font-bold text-[#002C5D] pt-8">Cardiomyopathy</p>
+                    <li class="hover:bg-white transition duration-300 text-center py-3 md:py-8 group  flex items-center gap-6 md:block">
+                        <p class="text-4xl md:text-5xl xl:text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-heart-crack"></i></p>
+                        <p class="text-base font-bold text-[#002C5D] md:pt-8">Cardiomyopathy</p>
                     </li>
-                    <li class="hover:bg-white transition duration-300 text-center py-8 group">
-                        <p class="text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-heart-pulse"></i></p>
-                        <p class="text-base font-bold text-[#002C5D] pt-8">Congenital heart defects</p>
+                    <li class="hover:bg-white transition duration-300 text-center py-3 md:py-8 group  flex items-center gap-6 md:block">
+                        <p class="text-4xl md:text-5xl xl:text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-heart-pulse"></i></p>
+                        <p class="text-base font-bold text-[#002C5D] md:pt-8">Congenital heart defects</p>
                     </li>
-                    <li class="hover:bg-white transition duration-300 text-center py-8 group">
-                        <p class="text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-bed-pulse"></i></p>
-                        <p class="text-base font-bold text-[#002C5D] pt-8">Heart infections</p>
+                    <li class="hover:bg-white transition duration-300 text-center py-3 md:py-8 group  flex items-center gap-6 md:block">
+                        <p class="text-4xl md:text-5xl xl:text-6xl text-[#002C5D] group-hover:text-[#02C9B8]"><i class="fa-solid fa-bed-pulse"></i></p>
+                        <p class="text-base font-bold text-[#002C5D] md:pt-8">Heart infections</p>
                     </li>
                 </ul>
                 <div class="bg-white ">
-                    <div class="grid grid-cols-2 gap-16 w-[85%] mx-auto">
+                    <div class="lg:grid grid-cols-2 gap-16 w-[85%] mx-auto">
                         <div class="py-16">
                             <h4 class="text-2xl font-bold text-[#002C5D]">Arrhythmia</h4>
                             <p class="text-base font-bold text-[#002C5D] pt-8">An arrhythmia is an abnormal heart rhythm. Some arrhythmias can cause problems with contractions of your heart chambers by not allowing the top chambers (atria) to squeeze correctly. </p>
@@ -265,38 +272,38 @@
     </div>
   </div>
   <!-- Treatments -->
-  <div class="bg-[#002C5D] mt-8 relative h-[170vh]">
-    <div class="grid grid-cols-3">
-        <div class="pt-6">
+  <div class="bg-[#002C5D] mt-8 lg:relative lg:h-[170vh]">
+    <div class="lg:grid grid-cols-3">
+        <div class="pt-6 hidden lg:block">
             <video autoplay muted loop>
                 <source src="img/video_service.mp4" type="video/mp4" ">
             </video>
         </div>
         <div class="col-span-2">
-            <div class="w-[70%] mx-auto pt-32">
-                <h4 class="text-xl font-bold text-[#02C9B8] pb-4">Treatments</h4>
-                <h2 class="text-6xl font-extrabold text-white">Comprenhesive Cardiovascular Care</h2>
-                <p class="noto-serif italic text-white text-2xl py-8">Delivering world class cardiology care</p>
+            <div class="w-[85%] lg:w-[70%] mx-auto pt-32">
+                <h4 class="text-base lg:text-xl font-bold text-[#02C9B8] pb-4">Treatments</h4>
+                <h2 class="text-3xl md:text-5xl xl:text-6xl font-extrabold text-white">Comprenhesive Cardiovascular Care</h2>
+                <p class="noto-serif italic text-white text-xl lg:text-2xl py-8">Delivering world class cardiology care</p>
 
-                <div class="grid grid-cols-2 gap-16 pt-6">
-                    <div class="border-r border-gray-300">
+                <div class="lg:grid grid-cols-2 gap-16 pt-6">
+                    <div class="lg:border-r lg:border-gray-300">
                         <p class="text-base text-white">Make an Appointment</p>
                         <div class="pt-2 group">
-                            <span class="text-3xl text-[#02C9B8] group-hover:text-white transition duration-300"><i class="fa-solid fa-phone"></i></span> <span class="text-3xl font-extrabold text-white group-hover:underline transition duration-300 pl-2">88 700 600</span>
+                            <span class="text-2xl lg:text-3xl text-[#02C9B8] group-hover:text-white transition duration-300"><i class="fa-solid fa-phone"></i></span> <span class="text-3xl font-extrabold text-white group-hover:underline transition duration-300 pl-2">88 700 600</span>
                        </div>
                     </div>
-                    <div class="">
+                    <div class="pt-8 lg:pt-0">
                         <p class="text-base text-white">Online Schedule</p>
                         <div class="pt-2 group">
-                            <span class="text-3xl text-[#02C9B8] group-hover:text-white transition duration-300"><i class="fa-regular fa-calendar-check"></i></span> <span class="text-3xl font-extrabold text-white group-hover:underline transition duration-300 pl-2">Book here</span>
+                            <span class="text-2xl lg:text-3xl text-[#02C9B8] group-hover:text-white transition duration-300"><i class="fa-regular fa-calendar-check"></i></span> <span class="text-3xl font-extrabold text-white group-hover:underline transition duration-300 pl-2">Book here</span>
                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="absolute top-[50%] left-[28%] w-[64%]">
-         <div class="grid grid-cols-3 gap-8">
+    <div class="lg:absolute top-[50%] left-[28%] w-[64%] w-[] mx-auto py-16 lg:py-0">
+         <div class="lg:grid grid-cols-3 gap-8">
             <div class="bg-white p-5">
                 <div class="">
                     <span class="text-[#02C9B8] text-4xl"><i class="fa-regular fa-heart"></i></span>
@@ -322,7 +329,7 @@
                 </div>
             </div>
 
-            <div class="bg-white p-5">
+            <div class="bg-white p-5 my-10 lg:my-0">
                 <div class="">
                     <span class="text-[#02C9B8] text-4xl"><i class="fa-regular fa-heart"></i></span>
                     <h3 class="text-[#002C5D] text-2xl font-semibold border-b border-gray-400 pb-6 pt-3">Peripheral Vascular Disease Treatment</h3>
@@ -374,12 +381,305 @@
          </div>
     </div>
   </div>
+  <!--  -->
+  <div class="">
+    <div class="lg:grid grid-cols-3 py-16">
+        <div class="lg:col-span-2 w-[85%] mx-auto">
+            <div class="title">
+                <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#002C5D]">How can the burden of cardiovascular diseases be reduced?</h2>
+                <p class="noto-serif italic text-[#002C5D] text-xl lg:text-2xl pt-6">Delivering world class cardiology care</p>
+            </div>
+            <div class="md:grid grid-cols-2 gap-6 py-8">
+                <p class="text-[#002C5D] text-base font-bold">A community in which all people achieve their full potential for health and well-being across the lifespan. We work to be trusted by patients, a valued partner in the community, and creators of positive .</p>
+                <p class="text-[#002C5D] text-base">We use a team approach to providing health care, and involve the patient as part of our team. nvolvement by our staff in the community enhances our ability to provide effective health care. A community in which all people achieve their full potential for health and well-being across the lifespan.</p>
+            </div>
+            <div class="md:grid grid-cols-2 xl:grid-cols-4 gap-2 justify-center py-8 lg:py-0 justify-center">
+                <div class="">
+                    <div class="border border-2 border-gray-300 rounded-full w-[130px] h-[130px] flex justify-center items-center">
+                        <span class="text-4xl font-semibold text-[#002C5D]">48%</span>
+                    </div>
+                    <p class="text-[#002C5D] text-base font-bold pt-4">Modeling and Analytics</p>
+                </div>
+                <div class="">
+                    <div class="border border-2 border-gray-300 rounded-full w-[130px] h-[130px] flex justify-center items-center"><span class="text-4xl font-semibold text-[#002C5D]">85%</span></div>
+                    <p class="text-[#002C5D] text-base font-bold pt-4">Sense and Respond</p>
+                </div>
+                <div class="">
+                    <div class="border border-2 border-gray-300 rounded-full text-center w-[130px] h-[130px] flex justify-center items-center"><span class="text-4xl font-semibold text-[#002C5D]">60%</span></div>
+                    <p class="text-[#002C5D] text-base font-bold pt-4">Analysis and Monitoring</p>
+                </div>
+                <div class="">
+                    <div class="border border-2 border-gray-300 rounded-full text-center w-[130px] h-[130px] flex justify-center items-center"><span class="text-4xl font-semibold text-[#002C5D]">97%</span></div>
+                    <p class="text-[#002C5D] text-base font-bold pt-4">Diagnostics and Root</p>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <img src="img/inner_image_07.jpg" alt="">
+        </div>
+    </div>
+  </div>
+  <!-- Heart Conditions -->
+  <div class="bg-[url(img/background_02.jpg)] bg-cover bg-no-repeat bg-center bg-fixed">
+    <div class="w-[85%] mx-auto py-32">
+        <div class="lg:w-[60%] ">
+            <h4 class="text-base md:text-xl font-bold text-[#02C9B8] pb-4">Common Heart Conditions</h4>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white">Cardiomyopathy</h2>
+            <p class="noto-serif italic text-white text-base lg:text-xl py-8">Cardiomyopathy is any disease of the heart muscle in which the heart loses its ability to pump blood effectively.</p>
+            <div class="lg:grid grid-cols-2">
+                <div class="">
+                    <p class="text-base text-white capitalize font-semibold">SYMPTOMS:</p>
+                    <div class="flex items-center gap-2 pt-4">
+                        <div class="flex items-center justify-center bg-white w-[15px] h-[15px] rounded-full">
+                            <span class="text-[5px]"><i class="fa-solid fa-circle"></i></span>
+                        </div>
+                        <p class="text-base text-white capitalize">Chest Pain</p>
+                    </div>
+                    <div class="flex items-center gap-2 py-2">
+                        <div class="flex items-center justify-center bg-white w-[15px] h-[15px] rounded-full">
+                            <span class="text-[5px]"><i class="fa-solid fa-circle"></i></span>
+                        </div>
+                        <p class="text-base text-white capitalize">Fatigue</p>
+                    </div>
+                    <div class="flex items-center gap-2 ">
+                        <div class="flex items-center justify-center bg-white w-[15px] h-[15px] rounded-full">
+                            <span class="text-[5px]"><i class="fa-solid fa-circle"></i></span>
+                        </div>
+                        <p class="text-base text-white capitalize">Shortness of breath</p>
+                    </div>
+                </div>
+                <div class="py-10 lg:py-0">
+                    <p class="text-white">Cardiomyopathy refers to conditions that affect your heart muscle. If you have cardiomyopathy, your heart can’t efficiently pump blood to the rest of your body. As a result, you may experience fatigue, shortness of breath or heart palpitations.</p>
+                </div>
+            </div>
+            <div class="border border-[#02C9B8] inline-block cursor-pointer py-5 px-8 hover:bg-[#02C9B8] transition duration-300 mt-4">
+                <a href="" class="uppercase text-white font-bold text-xs lg:text-sm">learn more about condition</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- burden -->
+  <div class="w-[90%] mx-auto">
+    <div class="xl:grid grid-cols-2 py-16">
+        <div class="">
+            <div class="title">
+                <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#002C5D]">How can the burden of cardiovascular diseases be reduced?</h2>
+                <p class="noto-serif italic text-[#002C5D] text-xl lg:text-2xl pt-6">Delivering world class cardiology care</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 xl:pl-10 pt-6">
+            <div class="p-8 border border-gray-200">
+                <span class="text-5xl md:text-6xl xl:text-7xl text-[#02C9B8]"><i class="fa-solid fa-user-doctor"></i></span>
+                <p class="text-[#002C5D] text-base font-bold pt-4">Interventional Cardiology and Cardic Surgery</p>
+            </div>
+            <div class="p-8 border border-gray-300">
+                <span class="text-5xl md:text-6xl xl:text-7xl text-[#02C9B8]"><i class="fa-solid fa-stethoscope"></i></span>
+                <p class="text-[#002C5D] text-base font-bold pt-4">Cardiology Telemedicine Appointments </p>
+            </div>
+            <div class="p-8 border border-gray-300">
+                <span class="text-5xl md:text-6xl xl:text-7xl text-[#02C9B8]"><i class="fa-regular fa-calendar-days"></i></span>
+                <p class="text-[#002C5D] text-base font-bold pt-4">Preoperative optimization of patient expectations</p>
+            </div>
+            <div class="p-8 border border-gray-300">
+                <span class="text-5xl md:text-6xl xl:text-7xl text-[#02C9B8]"><i class="fa-regular fa-hospital"></i></span>
+                <p class="text-[#002C5D] text-base font-bold pt-4">Cardiac Insurance Care Policy</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Testimonials -->
+   <div class="bg-gray-100 pb-20">
+        <div class="title text-center py-16">
+         <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#002C5D]">Testimonials</h2>
+            <p class="noto-serif italic text-[#002C5D] text-xl lg:text-2xl pt-4">Patient experience with our services</p>
+        </div>
+        <div class="w-[90%] mx-auto">
+            <div class="swiper mySwiper pb-[60px]">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="py-5 px-10 bg-white">
+                        <div class="flex justify-center"><img src="img/testimonials_01.jpg" alt="" class="rounded-full"></div>
+                        <div class="w-52 border-b border-gray-200 mx-auto text-center pb-4">
+                            <p class="text-[#002C5D] text-base font-bold pt-4">Jennifer Murphy</p>
+                            <p class="text-[#002C5D] text-sm pt-1">58, Boston</p>
+                        </div>
+                        <div class="text-center pt-4 pb-16">
+                            <span class="text-[#02C9B8] text-3xl"><i class="fa-solid fa-quote-right"></i></span>
+                            <p class="text-[#6C85A2]">"Dr. Mittal explained everything he was going to do. I was petrified and nervous, and he put me at ease and made me feel, and i most certainly... "</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="py-5 px-10 bg-white">
+                        <div class="flex justify-center"><img src="img/testimonials_02.jpg" alt="" class="rounded-full"></div>
+                        <div class="w-52 border-b border-gray-200 mx-auto text-center pb-4">
+                            <p class="text-[#002C5D] text-base font-bold pt-4">Jennifer Murphy</p>
+                            <p class="text-[#002C5D] text-sm pt-1">58, Boston</p>
+                        </div>
+                        <div class="text-center pt-4 pb-16">
+                            <span class="text-[#02C9B8] text-3xl"><i class="fa-solid fa-quote-right"></i></span>
+                            <p class="text-[#6C85A2]">"Dr. Mittal explained everything he was going to do. I was petrified and nervous, and he put me at ease and made me feel, and i most certainly... "</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="py-5 px-10 bg-white">
+                        <div class="flex justify-center"><img src="img/testimonials_03.jpg" alt="" class="rounded-full"></div>
+                        <div class="w-52 border-b border-gray-200 mx-auto text-center pb-4">
+                            <p class="text-[#002C5D] text-base font-bold pt-4">Jennifer Murphy</p>
+                            <p class="text-[#002C5D] text-sm pt-1">58, Boston</p>
+                        </div>
+                        <div class="text-center pt-4 pb-16">
+                            <span class="text-[#02C9B8] text-3xl"><i class="fa-solid fa-quote-right"></i></span>
+                            <p class="text-[#6C85A2]">"Dr. Mittal explained everything he was going to do. I was petrified and nervous, and he put me at ease and made me feel, and i most certainly... "</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="py-5 px-10 bg-white">
+                        <div class="flex justify-center"><img src="img/testimonials_04.jpg" alt="" class="rounded-full"></div>
+                        <div class="w-52 border-b border-gray-200 mx-auto text-center pb-4">
+                            <p class="text-[#002C5D] text-base font-bold pt-4">Jennifer Murphy</p>
+                            <p class="text-[#002C5D] text-sm pt-1">58, Boston</p>
+                        </div>
+                        <div class="text-center pt-4 pb-16">
+                            <span class="text-[#02C9B8] text-3xl"><i class="fa-solid fa-quote-right"></i></span>
+                            <p class="text-[#6C85A2]">"Dr. Mittal explained everything he was going to do. I was petrified and nervous, and he put me at ease and made me feel, and i most certainly... "</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="py-5 px-10 bg-white">
+                        <div class="flex justify-center"><img src="img/testimonials_01.jpg" alt="" class="rounded-full"></div>
+                        <div class="w-52 border-b border-gray-200 mx-auto text-center pb-4">
+                            <p class="text-[#002C5D] text-base font-bold pt-4">Jennifer Murphy</p>
+                            <p class="text-[#002C5D] text-sm pt-1">58, Boston</p>
+                        </div>
+                        <div class="text-center pt-4 pb-16">
+                            <span class="text-[#02C9B8] text-3xl"><i class="fa-solid fa-quote-right"></i></span>
+                            <p class="text-[#6C85A2]">"Dr. Mittal explained everything he was going to do. I was petrified and nervous, and he put me at ease and made me feel, and i most certainly... "</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="py-5 px-10 bg-white">
+                        <div class="flex justify-center"><img src="img/testimonials_02.jpg" alt="" class="rounded-full"></div>
+                        <div class="w-52 border-b border-gray-200 mx-auto text-center pb-4">
+                            <p class="text-[#002C5D] text-base font-bold pt-4">Jennifer Murphy</p>
+                            <p class="text-[#002C5D] text-sm pt-1">58, Boston</p>
+                        </div>
+                        <div class="text-center pt-4 pb-16">
+                            <span class="text-[#02C9B8] text-3xl"><i class="fa-solid fa-quote-right"></i></span>
+                            <p class="text-[#6C85A2]">"Dr. Mittal explained everything he was going to do. I was petrified and nervous, and he put me at ease and made me feel, and i most certainly... "</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+   </div>
+   <!-- footer -->
+   <div class="bg-[#002C5D] text-white">
+        <div class="w-[90%] mx-auto py-16">
+           <div class="lg:grid grid-cols-4 gap-10 border-b border-white pb-4">
+                <div class="">
+                    <a href=""><img src="img/logo_footer.png" alt=""></a>
+                    <p class="pt-4 text-sm">We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
+                </div>
+                <div class="">
+                    <h4 class="text-base font-semibold">Services</h4>
+                    <ul class="pt-6 text-sm">
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Business Planning</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Feasibility Study</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Startup Funding</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Business Plan Review</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Investor Presentation</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class="text-base font-semibold">Pricing & Fees</h4>
+                    <ul class="pt-6 text-sm">
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Compare Insurance Plans</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Standard Plan – $499</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Plus Plan – $799</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Premium Plan – $999</a></li>
+                        <li class="hover:text-gray-500 transition duration-300"><a href="#">Pro Plan – $1399</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class="text-base font-semibold">Connect</h4>
+                    <ul class="flex gap-2 pt-6 ">
+                        <li class="border-2 border-white rounded-full w-[30px] h-[30px] text-center hover:bg-white hover:text-[#02C9B8]"><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li class="border-2 border-white rounded-full w-[30px] h-[30px] text-center hover:bg-white hover:text-[#02C9B8]"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="border-2 border-white rounded-full w-[30px] h-[30px] text-center hover:bg-white hover:text-[#02C9B8]"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="border-2 border-white rounded-full w-[30px] h-[30px] text-center hover:bg-white hover:text-[#02C9B8]"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="flex gap-2 items-center pt-3">
+                        <div class="">
+                            <a href="" class="block"><i class="fa-solid fa-phone"></i></a>
+                            <a href="" class="block py-1"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="" class="block"><i class="fa-solid fa-location-dot"></i></a>
+                        </div>
+                        <div class="">
+                            <a href="" class="text-sm block">1-800-1-900</a>
+                            <a href="" class="text-sm block py-1">info@cliniq.com</a>
+                            <a href="" class="text-sm block">60 East 65th Street, New York</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="lg:flex justify-between pt-6">
+                <h6 class="text-sm">©2021 CLINIQ. All rights reserved</h6>
+                <div class="text-sm pt-8 lg:pt-0">
+                    <a href="" class="hover:underline hover:text-gray-500 transition duration-300">Privacy Policy</a>
+                    <a href="" class="hover:underline hover:text-gray-500 transition duration-300 pl-5">Cookie Policy</a>
+                </div>
+           </div>
+        </div>
+   </div>
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
 
 
 </body>
